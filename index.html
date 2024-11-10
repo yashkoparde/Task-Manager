@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Task Manager</h1>
+
+    <div class="task-board">
+      <div class="task-category" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2>To Do</h2>
+        <div class="task-list" id="todo-tasks"></div>
+        <input type="text" id="todo-input" placeholder="Enter a new task">
+        <button class="add-task-btn" onclick="addTask('todo')">Add Task</button>
+      </div>
+
+      <div class="task-category" id="in-progress" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2>In Progress</h2>
+        <div class="task-list" id="in-progress-tasks"></div>
+        <input type="text" id="in-progress-input" placeholder="Enter a task in progress">
+        <button class="add-task-btn" onclick="addTask('in-progress')">Add Task</button>
+      </div>
+
+      <div class="task-category" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2>Done</h2>
+        <div class="task-list" id="done-tasks"></div>
+        <input type="text" id="done-input" placeholder="Enter a completed task">
+        <button class="add-task-btn" onclick="addTask('done')">Add Task</button>
+      </div>
+
+      <div class="task-category" id="revised" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2>Revised</h2>
+        <div class="task-list" id="revised-tasks"></div>
+        <input type="text" id="revised-input" placeholder="Enter a revised task">
+        <button class="add-task-btn" onclick="addTask('revised')">Add Task</button>
+        <div id="checkboxes">
+          <!-- 5 Checkboxes for Revised tasks -->
+          <label><input type="checkbox"> Revised Once </label>
+          <label><input type="checkbox"> Revised Twice </label>
+          <label><input type="checkbox"> Revised Thrice </label>
+          <label><input type="checkbox"> Revised FourTimes </label>
+          <label><input type="checkbox"> Revised PentaTimes </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
